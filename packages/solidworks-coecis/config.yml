@@ -77,7 +77,7 @@ Scripts:
         User: '%TOOLS_DIR%\solidworks-accept-eula.ps1' # Runs at user login
 
 Registry:
-    HKUD:
+    HKLM:
         SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\Baja_Vault:
             DbName:
                 Type:   'String'
