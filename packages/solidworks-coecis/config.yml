@@ -76,9 +76,8 @@ Scripts:
     start:
         User: '%TOOLS_DIR%\solidworks-accept-eula.ps1' # Runs at user login
 
-
-Registry:               ## Registry values to be copied to each streaming instance
-    HKLM:   { }         ## Local Machine
+Registry:
+    HKUD:
         SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\Baja_Vault:
             DbName:
                 Type:   'String'
@@ -92,6 +91,7 @@ Registry:               ## Registry values to be copied to each streaming instan
                 Type:   'String'
                 Value:  '%BAJA_LICENSE%'
 
-             ShellRoot:
+            ShellRoot:
                 Type:   'String'
-                Value:  '%BAJA_LICENSE%'           
+                Value:  '%BAJA_LICENSE%'
+                
