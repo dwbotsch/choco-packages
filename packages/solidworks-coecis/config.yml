@@ -75,3 +75,23 @@ Services:                   ## Set default service behavior
 Scripts:
     start:
         User: '%TOOLS_DIR%\solidworks-accept-eula.ps1' # Runs at user login
+
+
+Registry:               ## Registry values to be copied to each streaming instance
+    HKLM:   { }         ## Local Machine
+        SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\Baja_Vault:
+            DbName:
+                Type:   'String'
+                Value:  'Baja_Vault'
+
+            DbServer:
+                Type:   'String'
+                Value:  '%BAJA_LICENSE%'
+
+            ServerLoc:
+                Type:   'String'
+                Value:  '%BAJA_LICENSE%'
+
+             ShellRoot:
+                Type:   'String'
+                Value:  '%BAJA_LICENSE%'           
